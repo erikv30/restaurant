@@ -1,0 +1,26 @@
+.row-foot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+}
+
+.foot-socials {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 1.5rem;
+  list-style: none;
+  text-align: center;
+  align-content: center;
+  margin-left: 2rem;
+}
+
+.fab:hover {
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.col-sm {
+  color: #e74c3c;
+  margin: 0;
+}
