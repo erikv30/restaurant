@@ -1,18 +1,20 @@
 import React from 'react'
 import Card from './Card'
 import './Main.css'
+import data from '../data'
 
 
 function Main() {
     return (
         <main>
-           <Card 
-           src='/images/pexels-iconcom-236488.jpg'
-           alt='Chiken'
-           productName='Chiken'
-           price='2000'
-            />
-            
+            {data.products.map((product) => (
+                <Card 
+                key={product._id}
+                src={product.images} 
+                alt={product.name}
+                productName={product.name}
+                price={product.price} />
+            ))}
         </main>
     )
 }

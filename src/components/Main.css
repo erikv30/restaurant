@@ -10,12 +10,12 @@ img {
 }
 
 img.medium {
-  max-width: 24rem;
-  min-width: 24rem;
-  min-height: 29.397rem;
-  max-height: 29.397rem;
+  max-width: 29rem;
+  min-width: 29rem;
+  min-height: 35.397rem;
+  max-height: 35.397rem;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 h1 {
@@ -25,6 +25,7 @@ h1 {
 
 h2 {
   font-size: 1.6rem;
+  padding-left: 1rem;
 }
 
 button {
@@ -59,19 +60,16 @@ button.add {
 
 .card-body {
   padding-bottom: 0.6rem;
-  width: 100%;
 }
 
 .card-body > * {
-  display: flex;
-  flex-direction: row;
   margin-bottom: 0.5rem;
-  margin-top: 0;
-  justify-content: center;
 }
 
 .price {
   font-size: 2rem;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 

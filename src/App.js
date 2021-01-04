@@ -1,20 +1,20 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css'
 import Footer from './components/Footer';
-import Main from './components/Main';
 import Navbar from './components/Navbar';
+import Home from './Pages/Home';
+import Cart from './Pages/Cart';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
       <div className="App">
         <Navbar />
-        <Main />
- {/*       <Switch>
+        <Switch>
           <Route path='/' component={Home} exact/>
           <Route path='/cart' component={Cart} />
-        </Switch> */}
+        </Switch> 
         <Footer />
       </div>
     </Router>
