@@ -5,7 +5,13 @@ const data = {
             name:'Sencilla',
             image:'/images/pexels-engin-akyurt-3356409.jpg',
             price:2000,
-        }
+        },
+        {
+            id:'2',
+            name:'Chiken',
+            image:'/images/pexels-iconcom-236488.jpg',
+            price:2000,
+        },
     ],
 
     bebidas: [

@@ -23,3 +23,12 @@ a.brand {
   color: white;
   font-size: 3rem;
 }
+
+.basket {
+  background-color: #2ebc4f;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}

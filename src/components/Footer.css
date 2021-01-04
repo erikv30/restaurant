@@ -8,11 +8,10 @@
 .foot-socials {
   display: grid;
   grid-template-columns: repeat(6, auto);
-  grid-gap: 1.5rem;
+  grid-gap: 1.2rem;
   list-style: none;
   text-align: center;
   align-content: center;
-  margin-left: 2rem;
 }
 
 .fab:hover {

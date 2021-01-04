@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css'
 import Footer from './components/Footer';
+import Main from './components/Main';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+        <Main />
  {/*       <Switch>
           <Route path='/' component={Home} exact/>
           <Route path='/cart' component={Cart} />

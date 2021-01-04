@@ -1,0 +1,83 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  border-radius: 0.5rem;
+}
+
+img.medium {
+  max-width: 24rem;
+  min-width: 24rem;
+  min-height: 29.397rem;
+  max-height: 29.397rem;
+  width: 100%;
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2ebc4f;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: #2ebc4f;
+}
+
+button.add {
+  width: 70%;
+}
+
+/* card */
+.card {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  color: white;
+}
+
+.card-body {
+  padding-bottom: 0.6rem;
+  width: 100%;
+}
+
+.card-body > * {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  justify-content: center;
+}
+
+.price {
+  font-size: 2rem;
+  justify-content: center;
+}
+
+.button-add {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}

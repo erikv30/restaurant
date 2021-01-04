@@ -7,7 +7,9 @@ function Card({src, alt, productName, price}) {
             <div className='card-body'>
                 <h2>{productName}</h2>
                 <div className="price">₡ {price}</div>
-                <button>Add to Cart</button>
+                <div className='button-add'>
+                    <button className='add'>Add to Cart</button>
+                </div>
             </div>
             
         </div>

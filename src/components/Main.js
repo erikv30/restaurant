@@ -6,7 +6,12 @@ import './Main.css'
 function Main() {
     return (
         <main>
-           <Card />
+           <Card 
+           src='/images/pexels-iconcom-236488.jpg'
+           alt='Chiken'
+           productName='Chiken'
+           price='2000'
+            />
             
         </main>
     )
