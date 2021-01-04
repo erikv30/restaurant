@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <header className='nav'>
             <div>
-            <Link href="/" className="brand"><i class="fas fa-hamburger"></i> Erick's Burgers</Link>
+            <Link to="/" className="brand"><i className="fas fa-hamburger"></i> Erick's Burgers</Link>
             </div>
             <div className='basket-content'>
                 <Link to="/cart"><i className="fas fa-shopping-bag"></i> <span className='basket'>0</span></Link>
