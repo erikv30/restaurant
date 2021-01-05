@@ -1,8 +1,11 @@
 .nav {
+  order: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  background-color: #24292e;
+  width: 100%;
 }
 
 a {

@@ -6,7 +6,7 @@ import data from '../data'
 
 function Main() {
     return (
-        <main>
+        <main className='main'>
             {data.products.map((product) => (
                 <Card 
                 key={product._id}

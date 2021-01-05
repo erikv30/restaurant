@@ -50,6 +50,9 @@ button.add {
   width: 70%;
 }
 
+.main {
+  order: 2;
+}
 /* card */
 .card {
   background-color: rgba(0, 0, 0, 0.2);
