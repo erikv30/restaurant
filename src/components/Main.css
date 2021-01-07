@@ -5,8 +5,18 @@ main {
   align-items: center;
 }
 
+.min-30 {
+  min-width: 30rem;
+}
+
 img {
   border-radius: 0.5rem;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
+  object-fit: contain;
 }
 
 img.medium {
@@ -27,10 +37,30 @@ h2 {
   font-size: 1.6rem;
   padding-left: 1rem;
 }
+.h2-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+.link-back {
+  color: lightgreen;
+  text-decoration: underline;
+}
 button {
   padding: 1rem;
   border-radius: 0.5rem;
+  border: 0.1rem #2ebc4f solid;
   font-size: 1.6rem;
   font-weight: bold;
   font-family: Helvetica, Arial, sans-serif;
@@ -41,13 +71,29 @@ button {
   cursor: pointer;
 }
 
+button.block {
+  width: 100%;
+}
+
 button:hover {
+  border: 0.1rem #2ebc4f solid;
   background-color: white;
   color: #2ebc4f;
 }
 
 button.add {
   width: 70%;
+}
+
+button.delete {
+  background-color: #e74c3c;
+  border: 0.1rem #e74c3c solid;
+}
+
+button.delete:hover {
+  background-color: white;
+  border: 0.1rem #e74c3c solid;
+  color: #e74c3c;
 }
 
 .main {
@@ -81,4 +127,27 @@ button.add {
   flex-direction: row;
   width: 100%;
   justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  margin: 1rem;
+  color: white;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 50rem;
 }

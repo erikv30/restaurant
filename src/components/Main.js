@@ -8,8 +8,9 @@ function Main() {
     return (
         <main className='main'>
             {data.products.map((product) => (
-                <Card 
-                key={product._id}
+                <Card
+                id={product.id} 
+                key={product.id}
                 src={product.images} 
                 alt={product.name}
                 productName={product.name}
