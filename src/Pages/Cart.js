@@ -33,9 +33,9 @@ export default class Cart extends Component {
                                                             </div>
                                                             <div className='qty'>
                                                                 Qty: 
-                                                                <button className='qty-btn' onClick={() => value.decrement(item.id)}>-</button>
+                                                                <button className='qty-btn' disabled={item.count === 1} onClick={() => value.decrement(item.id)}>-</button>
                                                                     {item.count}
-                                                                <button className='qty-btn' onClick={() => value.increment(item.id)}>+</button>
+                                                                <button className='qty-btn' disabled={item.count === 9} onClick={() => value.increment(item.id)}>+</button>
                                                             </div>
                                                             <div className='subtotal'>
                                                                 SubTotal: ₡{item.total}
