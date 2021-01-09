@@ -8,7 +8,7 @@ export default class Card extends Component {
            <ProductConsumer>
             {(value) => (
                 <div id={id} className='card'>
-                    <img className='medium' src={src} alt={productName}/>
+                    <img className='medium' src={process.env.PUBLIC_URL + src} alt={productName}/>
                     <div className='card-body'>
                         <div className='h2-center'><h2>{productName}</h2></div>
                         <div className="price">₡ {price}</div>

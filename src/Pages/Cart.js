@@ -21,7 +21,7 @@ export default class Cart extends Component {
                                                         <div className="row">
                                                             <div>
                                                                 <img 
-                                                                src={item.src} 
+                                                                src={process.env.PUBLIC_URL + item.src} 
                                                                 alt={item.productName}
                                                                 className='small'/>
                                                             </div>
