@@ -1,33 +1,28 @@
-import React from 'react'
-import { useStateValue } from '../StateProvider'
+import React, { Component } from 'react'
+import { ProductConsumer } from '../contextAPI'
 
-function Card({id, src, alt, productName, price}) {
-    const [{cartItems}, dispatch] = useStateValue()
-    const addToCart = () => {
-        dispatch({
-            type: 'ADD_TO_CART',
-            item: {
-                id: id,
-                productName: productName,
-                images: src,
-                alt: alt,
-                price: price,
-            },
-        })
-    }
-    return (
-        <div id={id} className='card'>
-            <img className='medium' src={src} alt={alt}/>
-            <div className='card-body'>
-                <div className='h2-center'><h2>{productName}</h2></div>
-                <div className="price">₡ {price}</div>
-                <div className='button-add'>
-                    <button className='add' onClick={addToCart} >Add to Cart</button>
+export default class Card extends Component {
+    render() {
+        const {id, src, productName, price, inCart} = this.props.product
+        return(
+           <ProductConsumer>
+            {(value) => (
+                <div id={id} className='card'>
+                    <img className='medium' src={src} alt={productName}/>
+                    <div className='card-body'>
+                        <div className='h2-center'><h2>{productName}</h2></div>
+                        <div className="price">₡ {price}</div>
+                        <div className='button-add'>
+                            <button className='add' disabled={inCart} onClick={()=>{value.addToCart(id)}} >
+                                {inCart === true ? (<span>In Cart</span>) : (<span>Add to Cart</span>)}
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-        </div>
-    )
+            )}
+            </ProductConsumer>
+        )
+    }
 }
 
-export default Card
+

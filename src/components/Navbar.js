@@ -1,21 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { useStateValue } from '../StateProvider'
 import './Navbar.css'
+import { ProductConsumer } from '../contextAPI'
 
-function Navbar() {
-    const [{ cartItems }] = useStateValue();
-    return (
-        <header className='nav'>
-            <div>
-            <Link to="/" className="brand"><i className="fas fa-hamburger"></i> Erick's Burgers</Link>
-            </div>
-            <div className='basket-content'>
-                <Link to="/cart"><i className="fas fa-shopping-bag"></i> <span className='basket'>{cartItems?.length}</span></Link>
-                
-            </div>
-        </header>
-    )
+export default class Navbar extends Component {
+    render() {
+        return(
+            <header className='nav'>
+                <div>
+                    <Link to="/" className="brand"><i className="fas fa-hamburger"></i> Erick's Burgers</Link>
+                </div>
+                <ProductConsumer>
+                    {(value) => {
+                        return (
+                            <div className='basket-content'>
+                                <Link to="/cart"><i className="fas fa-shopping-bag"></i> <span className='basket'>{value.cartItems.length}</span></Link>
+                            </div>
+                        )
+                    }}
+                </ProductConsumer>
+            </header>
+        )
+    }
 }
 
-export default Navbar

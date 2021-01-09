@@ -5,8 +5,19 @@ main {
   align-items: center;
 }
 
-.min-30 {
-  min-width: 30rem;
+.col-30 {
+  max-width: 25rem;
+  min-width: 25rem;
+}
+
+.qty {
+  max-width: 10rem;
+  min-width: 10rem;
+}
+
+.subtotal {
+  max-width: 13rem;
+  min-width: 13rem;
 }
 
 img {
@@ -96,6 +107,16 @@ button.delete:hover {
   color: #e74c3c;
 }
 
+.qty-btn {
+  background-color: #2ebc4f;
+  color: white;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  border: 0.1rem #2ebc4f solid;
+  font-weight: bold;
+}
+
 .main {
   order: 2;
 }
@@ -142,12 +163,20 @@ button.delete:hover {
 
 .row.top {
   align-items: flex-start;
-}
-
-.col-1 {
-  flex: 1 1 25rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .col-2 {
-  flex: 2 1 50rem;
+  width: 90vw;
+}
+.s-cart {
+  padding-left: 2rem;
+}
+
+.total-cart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2rem;
 }

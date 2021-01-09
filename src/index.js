@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import reducer, { initialState } from './reducer';
-import { StateProvider } from './StateProvider';
+import { ProductProvider } from './contextAPI';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <StateProvider initialState={initialState} reducer={reducer}>
+  <ProductProvider>
+    <React.StrictMode>
       <App />
-    </StateProvider>
-  </React.StrictMode>,
+    </React.StrictMode>
+  </ProductProvider>,
   document.getElementById('root')
 );
 

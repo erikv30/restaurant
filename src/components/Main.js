@@ -1,23 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Card from './Card'
 import './Main.css'
-import data from '../data'
+import { ProductConsumer } from '../contextAPI'
 
-
-function Main() {
-    return (
-        <main className='main'>
-            {data.products.map((product) => (
-                <Card
-                id={product.id} 
-                key={product.id}
-                src={product.images} 
-                alt={product.name}
-                productName={product.name}
-                price={product.price} />
-            ))}
+export default class Main extends Component {
+    render() {
+        return(
+            <main className='main'>
+            <ProductConsumer>
+                {(value) => {
+                    return value.products.map(product => {
+                        return <Card key={product.id} product={product} />
+                    })
+                }}
+            </ProductConsumer>
         </main>
-    )
+        )
+    }
 }
 
-export default Main
